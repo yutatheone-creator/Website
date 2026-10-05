@@ -1,0 +1,264 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #050505;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 60px 20px;
+
+    /* Hintergrund */
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(120, 80, 255, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(0, 200, 255, 0.12),
+            transparent 30%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   HAUPTBEREICH
+========================= */
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* =========================
+   H1
+========================= */
+
+h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    text-align: center;
+
+    margin: 40px 0;
+
+    font-weight: 800;
+    letter-spacing: -5px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(130, 90, 255, 0.8),
+        0 0 30px rgba(130, 90, 255, 0.4);
+
+    animation: titleGlow 4s ease-in-out infinite alternate;
+}
+
+
+/* =========================
+   H2 / H3
+========================= */
+
+h2 {
+    margin-top: 70px;
+    margin-bottom: 25px;
+
+    font-size: 35px;
+
+    color: #a78bfa;
+
+    text-shadow:
+        0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+h3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    color: #8b5cf6;
+
+    border-left: 4px solid #8b5cf6;
+    padding-left: 15px;
+
+    transition: 0.3s;
+}
+
+h3:hover {
+    padding-left: 25px;
+
+    color: #c4b5fd;
+
+    text-shadow:
+        0 0 15px #8b5cf6;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    color: #b8b8b8;
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+
+/* Hover auf Text */
+
+p:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(139, 92, 246, 0.5);
+
+    background: rgba(139, 92, 246, 0.07);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(139, 92, 246, 0.08);
+}
+
+
+/* =========================
+   TRENNLINIE
+========================= */
+
+hr {
+    border: none;
+
+    height: 1px;
+
+    margin: 30px 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #8b5cf6,
+        #06b6d4,
+        transparent
+    );
+
+    box-shadow:
+        0 0 15px #8b5cf6;
+}
+
+
+/* =========================
+   LINK / BUTTON
+========================= */
+
+a {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 14px 28px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #06b6d4
+    );
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.4);
+
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, 0.7),
+        0 0 60px rgba(6, 182, 212, 0.3);
+}
+
+
+/* =========================
+   ANIMATIONEN
+========================= */
+
+@keyframes titleGlow {
+
+    from {
+        text-shadow:
+            0 0 10px rgba(130, 90, 255, 0.5),
+            0 0 20px rgba(130, 90, 255, 0.2);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px rgba(130, 90, 255, 1),
+            0 0 50px rgba(130, 90, 255, 0.5);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+}
